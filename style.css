@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mina&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+*{
+    
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(13, 16, 31);
+}
+
+.container {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: antiquewhite;
+    font-family: 'Afacad', sans-serif;
+}
+
+
+
+.game{
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5vmin;
+}
+
+.box {
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 20px;
+    font-size: 1.6rem;
+}
+
+.box:disabled{
+    background-color: white;
+    color: black;
+}
+
+#reset_btn{
+    border: 2px solid;
+    margin-top: 1em;
+    border-radius: 10px;
+    height: 2.5rem;
+    width: 7.8rem;
+    transition: all ease 1s;
+}
+
+#reset_btn:hover{
+    border-radius: 18px;
+    background-color: indigo;
+    color: white;
+}
+
+#msg-Cont{
+    font-family: 'Mina', sans-serif;
+    display: none;
+    color: azure;
+}
+
+.myfooter{
+    font-family: 'Caveat', cursive;
+    margin-top: 12px;
+    color: aqua;
+}
