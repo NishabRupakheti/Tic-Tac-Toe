@@ -1,15 +1,15 @@
-
-//Variables of the element we want to access 
 const boxes = document.querySelectorAll('.box');
 const reset_btn = document.getElementById('reset_btn')
 const messagebox = document.getElementById('msg-Cont');
 const winnerSpan = document.getElementById('winner');
+let numberOfwinsX = 0;
+let numberOfwinsO = 0;
+const xscore = document.getElementById('xscore')
+const oscore = document.getElementById('oscore')
+const resetscore = document.getElementById('resetscore')
 
-
-// Variable that keeps track of the turns 
 let turnO = true;
 
-//Variable that stores the win patterns
 const winPatterns = [
     [0,1,2],
     [0,3,6],
@@ -38,7 +38,6 @@ boxes.forEach((box)=>{
 })
 
 
-// Adding the eventlistener to the reset button 
 reset_btn.addEventListener('click', ()=>{
     boxes.forEach(box => {
         box.innerText = ""
@@ -48,7 +47,12 @@ reset_btn.addEventListener('click', ()=>{
 
 })
 
-//Checking the winner with a function 
+resetscore.addEventListener('click',()=>{
+    numberOfwinsO = 0 
+    numberOfwinsX = 0
+    xscore.innerText = numberOfwinsX;
+    oscore.innerText = numberOfwinsO
+})
 
 
 const checkWinner = ()=>{
@@ -60,9 +64,25 @@ const checkWinner = ()=>{
         if (pos1val!="" &&  pos2val!="" && pos3val!="" ){
             if (pos1val === pos2val && pos2val === pos3val){
                 showWinner(pos1val);
+                increaseWinCount(pos1val);
                 disableBoxes();
             }
         }
+    }
+}
+
+function increaseWinCount(posVal){
+    if(posVal === "X"){
+        console.log("X wins")
+        numberOfwinsX += 1;
+        xscore.innerText = numberOfwinsX;
+        console.log(numberOfwinsX)
+    }
+    else{
+        console.log("0 wins")
+        numberOfwinsO += 1;
+        oscore.innerText = numberOfwinsO
+        console.log(numberOfwinsO)
     }
 }
 

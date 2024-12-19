@@ -22,7 +22,6 @@ body {
 }
 
 .container {
-    flex-grow: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,9 +41,9 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
-    width: 60vmin;
-    height: 60vmin;
-    padding: 10px;
+    width: 50vmin;
+    height: 50vmin;
+    padding: 7px;
 }
 
 .box {
@@ -81,8 +80,8 @@ body {
     border-radius: 25px;
     transition: all 0.3s ease-in-out;
     width: 30%;
-    margin: auto;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 5px auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 #reset_btn:hover {
@@ -109,7 +108,6 @@ body {
     font-size: 1.2rem;
     color: #00ffff;
     margin-top: 10px;
-    margin-bottom: 20px;
     text-shadow: 2px 2px 5px rgba(0, 255, 255, 0.4);
 }
 
@@ -121,4 +119,35 @@ body {
     100% {
         opacity: 1;
     }
+}
+
+
+#CheckScoreBtn {
+    border: 1px solid #b6b3aa;
+    background-color: transparent;
+    color: #c8c5b9;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    width: 30%;
+    margin: 5px auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+}
+
+#CheckScoreBtn:hover {
+    background-color: #ffcc00;
+    color: #0d102f;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 555px) {
+
+    #reset_btn,
+    #CheckScoreBtn,
+    .game {
+        width: 80%;
+    }
+
 }
