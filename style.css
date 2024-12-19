@@ -1,83 +1,124 @@
 @import url('https://fonts.googleapis.com/css2?family=Afacad&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mina&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
-*{
-    
-    margin: 0%;
-    padding: 0%;
+
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
+    font-family: 'Mina', sans-serif;
     text-align: center;
     height: 100vh;
     width: 100vw;
-    background-color: rgb(13, 16, 31);
+    background-color: #0d102f;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
 }
 
 .container {
-    height: 60vh;
+    flex-grow: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 10px;
 }
 
-.header{
-    height: 20vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.5rem;
-    color: antiquewhite;
+.header {
     font-family: 'Afacad', sans-serif;
+    font-size: 2.4rem;
+    color: #ffcc00;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 8px rgba(255, 255, 255, 0.2);
 }
 
-
-
-.game{
-    height: 60vmin;
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
     width: 60vmin;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5vmin;
+    height: 60vmin;
+    padding: 10px;
 }
 
 .box {
-    height: 18vmin;
-    width: 18vmin;
-    border-radius: 20px;
-    font-size: 1.6rem;
+    height: 100%;
+    width: 100%;
+    font-size: 1.5rem;
+    background-color: #4b4b4b;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
 }
 
-.box:disabled{
-    background-color: white;
-    color: black;
+.box:disabled {
+    background-color: #ffffff;
+    color: #000000;
 }
 
-#reset_btn{
-    border: 2px solid;
-    margin-top: 1em;
-    border-radius: 10px;
-    height: 2.5rem;
-    width: 7.8rem;
-    transition: all ease 1s;
+.box:hover:not(:disabled) {
+    background-color: #3f3f3f;
+    transform: scale(1.1);
 }
 
-#reset_btn:hover{
-    border-radius: 18px;
-    background-color: indigo;
-    color: white;
+#reset_btn {
+    border: 1px solid #b6b3aa;
+    background-color: transparent;
+    color: #c8c5b9;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    width: 30%;
+    margin: auto;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-#msg-Cont{
+#reset_btn:hover {
+    background-color: #ffcc00;
+    color: #0d102f;
+    transform: scale(1.1);
+}
+
+#msg-Cont {
     font-family: 'Mina', sans-serif;
+    font-size: 1.5rem;
+    color: #aad8ff;
+    margin-top: 20px;
     display: none;
-    color: azure;
 }
 
-.myfooter{
+#msg-Cont.show {
+    display: block;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.myfooter {
     font-family: 'Caveat', cursive;
-    margin-top: 12px;
-    color: aqua;
+    font-size: 1.2rem;
+    color: #00ffff;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 255, 255, 0.4);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
