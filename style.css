@@ -5,7 +5,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -26,6 +25,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 10px;
+    height: 55vh;
 }
 
 .header {
@@ -145,8 +145,7 @@ body {
 @media screen and (max-width: 555px) {
 
     #reset_btn,
-    #CheckScoreBtn,
-    .game {
+    #CheckScoreBtn {
         width: 80%;
     }
 
