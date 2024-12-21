@@ -20,7 +20,7 @@ body {
     padding: 20px;
 }
 
-.container {
+.Maincontainer {
     display: flex;
     justify-content: center;
     align-items: center;
